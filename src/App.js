@@ -1,25 +1,31 @@
-import logo from "./logo.svg";
+import React from "react";
+import ReactDOM from "react-dom";
+import Logo from "./Logo";
+import BestPokemon from "./BestPokemon";
+import CaughtPokemon from "./CaughtPokemon";
+import PokemonMovesSelector from "./PokemonMovesSelector";
+import PokemonCity from "./PokemonCity";
 import "./App.css";
 
+const rootElement = document.querySelector("#root");
+
 function App() {
+  const date = new Date().toLocaleDateString();
+
+  function logWhenClicked() {
+    console.log("This is a pokedex");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="whole-page">
+      <Logo appName="Andriana" handleClick={logWhenClicked} />
+      <BestPokemon abilities={["Flash-fire", "Drought"]} />
+      <CaughtPokemon date={date} />
+      <PokemonMovesSelector />
+      <PokemonCity />
     </div>
   );
 }
+
+ReactDOM.render(<App />, rootElement);
 
 export default App;
