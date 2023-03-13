@@ -29,6 +29,7 @@ const CaughtPokemon = ({ date }) => {
       setCaught(caught.concat(randomIndex));
     } else {
       setCaught(caught.concat(pokemonNameInput));
+      setPokemonNameInput("");
     }
   }
 
