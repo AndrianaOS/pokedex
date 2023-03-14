@@ -20,7 +20,7 @@ function PokemonMovesSelector() {
     setId(16);
   }
   function handleCaterpieClick() {
-    setId(4);
+    setId(10);
   }
   function handleRattataClick() {
     setId(19);
@@ -29,7 +29,7 @@ function PokemonMovesSelector() {
     setId(13);
   }
   function handleVenusaurClick() {
-    setId(1);
+    setId(3);
   }
 
   return (

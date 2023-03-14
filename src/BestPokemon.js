@@ -1,6 +1,7 @@
 import React from "react";
 
 const BestPokemon = (props) => {
+  // console.log(props);
   // const [favPokemon, setFavPokemon] = useState(true);
 
   // useEffect(() => {
@@ -10,13 +11,19 @@ const BestPokemon = (props) => {
   //     .catch((error) => console.log(error));
   // }, [props.pokemonId]);
 
-  const powers = props.abilities.map((ability) => (
-    <li key={ability}>{ability}</li>
-  ));
+  // const powers = props.abilities.map((ability) => (
+  //   <li key={ability}>{ability}</li>
+  // ));
   return (
-    <div>
+    <div className="favourite">
       <p>My favorite Pokemon is Ninetales</p>
-      <ul>{powers}</ul>
+      <ul>
+        {props.abilities.map((ability) => (
+          <li key={ability} className="fav-item">
+            {ability}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

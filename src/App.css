@@ -87,3 +87,91 @@ button {
   color: blue;
   background-image: linear-gradient(#61dafb, white);
 }
+
+.best {
+  margin-right: 3em;
+}
+
+.best:hover,
+.caught:hover {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration-color: #f0e4a0;
+  text-decoration-thickness: 0.2em;
+}
+
+.caught {
+  margin-left: 3em;
+}
+
+.pokemon {
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+@media (max-width: 420px) {
+  .whole-page {
+    color: red;
+    width: 100%;
+  }
+  .pokemon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-align: center;
+  }
+  .best {
+    margin-right: 0;
+  }
+  .caught {
+    margin-left: 0;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .poke-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .catch {
+    width: 10em;
+  }
+  .poke-moves {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1em;
+  }
+  .favourite {
+    text-align: center;
+  }
+  .favourite ul {
+    padding: 0;
+  }
+  .fav-item {
+    list-style: none;
+  }
+  .city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-input {
+    margin-right: 0;
+  }
+  .footer {
+    text-align: center;
+  }
+  .catch-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  /* header img {
+  } */
+}

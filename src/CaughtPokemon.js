@@ -34,7 +34,7 @@ const CaughtPokemon = ({ date }) => {
   }
 
   return (
-    <div>
+    <div className="catch-container">
       <p className="catch-text">
         Caught {caught.length} Pokemon on {date}
       </p>
