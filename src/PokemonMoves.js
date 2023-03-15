@@ -11,7 +11,7 @@ function PokemonMoves(props) {
   }, [props.pokemonId]);
 
   return pokemonData ? (
-    <div>
+    <div className="moves">
       <p>{pokemonData.name}'s moves:</p>
       <ul className="poke-moves">
         {pokemonData.moves.map((power, index) => {

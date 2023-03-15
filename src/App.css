@@ -112,7 +112,6 @@ button {
 
 @media (max-width: 420px) {
   .whole-page {
-    color: red;
     width: 100%;
   }
   .pokemon {
@@ -133,7 +132,11 @@ button {
     width: 100%;
     text-align: center;
   }
-  .poke-button {
+  header h1 {
+    margin-left: 1em;
+  }
+  .poke-button,
+  .city {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,11 +158,6 @@ button {
   .fav-item {
     list-style: none;
   }
-  .city {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .text-input {
     margin-right: 0;
   }
@@ -172,6 +170,41 @@ button {
     gap: 1em;
     align-items: center;
   }
-  /* header img {
-  } */
+}
+
+@media (max-width: 900px) {
+  .poke-button {
+    display: grid;
+    grid-template-columns: repeat(2, 12em);
+    justify-content: center;
+  }
+  .poke-moves {
+    display: grid;
+    grid-template-columns: repeat(3, 13em);
+    grid-gap: 1em;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .poke-button {
+    margin: 0 3em;
+  }
+  .moves {
+    margin: 0 1em;
+  }
+  .poke-moves {
+    display: grid;
+    grid-template-columns: repeat(5, 10em);
+    gap: 1em;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
 }
