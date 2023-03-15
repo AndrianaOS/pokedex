@@ -110,7 +110,7 @@ button {
   font-size: 1.2em;
 }
 
-@media (max-width: 420px) {
+@media (min-width: 420px) {
   .whole-page {
     width: 100%;
   }
@@ -172,7 +172,7 @@ button {
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 700px) {
   .poke-button {
     display: grid;
     grid-template-columns: repeat(2, 12em);
@@ -180,7 +180,7 @@ button {
   }
   .poke-moves {
     display: grid;
-    grid-template-columns: repeat(3, 13em);
+    grid-template-columns: repeat(3, 10em);
     grid-gap: 1em;
   }
   .footer {
@@ -188,10 +188,16 @@ button {
     align-items: center;
     gap: 1em;
   }
+  header img {
+    height: 15em;
+    width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media (max-width: 1200px) {
-  .poke-button {
+/* @media (min-width: 1200px) {
+  /* .poke-button {
     margin: 0 3em;
   }
   .moves {
@@ -206,5 +212,77 @@ button {
     display: flex;
     align-items: center;
     gap: 1em;
-  }
+  } */
+/* .poke-moves {
+  display: grid;
+  grid-template-columns: repeat(6, 10em);
 }
+
+.poke-button {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1em;
+}
+
+.whole-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: blue;
+  font-size: 1.2em;
+  background-image: linear-gradient(#61dafb, white);
+}
+
+.text-input {
+  font-size: 1.2em;
+  border-radius: 40px;
+  margin-right: 2em;
+  padding: 0.5em;
+  border-color: blue;
+}
+
+.catch {
+  font-size: 1.2em;
+  padding: 0.5em;
+  border-radius: 30px;
+  border-color: blue;
+}
+
+.catch-text {
+  text-align: center;
+}
+
+.city {
+  margin: 2em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  color: blue;
+  background-image: linear-gradient(#61dafb, white);
+}
+
+.best {
+  margin-right: 3em;
+}
+
+.best:hover,
+.caught:hover {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration-color: #f0e4a0;
+  text-decoration-thickness: 0.2em;
+}
+
+.caught {
+  margin-left: 3em;
+}
+
+.pokemon {
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 1.2em;
+} */
+/* }  */
