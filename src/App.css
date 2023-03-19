@@ -39,7 +39,9 @@
 
 .poke-moves {
   display: grid;
-  grid-template-columns: repeat(6, 10em);
+  grid-template-columns: repeat(4, 15em);
+  gap: 1em;
+  justify-items: center;
 }
 
 .poke-button {
@@ -180,7 +182,7 @@ button {
   }
   .poke-moves {
     display: grid;
-    grid-template-columns: repeat(3, 10em);
+    grid-template-columns: repeat(2, 15em);
     grid-gap: 1em;
   }
   .footer {

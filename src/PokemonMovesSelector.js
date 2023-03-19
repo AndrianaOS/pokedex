@@ -1,64 +1,55 @@
 import React, { useState } from "react";
 import PokemonMoves from "./PokemonMoves";
 
+const pokemonNames = [
+  "Bulbasaur",
+  "Squirtle",
+  "Charmander",
+  "Pidgey",
+  "Caterpie",
+  "Rattata",
+  "Weedle",
+  "Venusaur",
+];
+
 function PokemonMovesSelector() {
   const [id, setId] = useState(null);
-  // console.log(props.pokemonData);
 
-  // function pokeClick() {}
-
-  function handleBulbasaurClick() {
-    setId(1);
-  }
-  function handleSquirtleClick() {
-    setId(7);
-  }
-  function handleCharmanderClick() {
-    setId(4);
-  }
-  function handlePidgeyClick() {
-    setId(16);
-  }
-  function handleCaterpieClick() {
-    setId(10);
-  }
-  function handleRattataClick() {
-    setId(19);
-  }
-  function handleWeedleClick() {
-    setId(13);
-  }
-  function handleVenusaurClick() {
-    setId(3);
-  }
+  const handleClick = (event) => {
+    if (event.target.name === "Bulbasaur") {
+      setId(1);
+    } else if (event.target.name === "Squirtle") {
+      setId(7);
+    } else if (event.target.name === "Charmander") {
+      setId(4);
+    } else if (event.target.name === "Pidgey") {
+      setId(16);
+    } else if (event.target.name === "Caterpie") {
+      setId(10);
+    } else if (event.target.name === "Rattata") {
+      setId(19);
+    } else if (event.target.name === "Weedle") {
+      setId(13);
+    } else if (event.target.name === "Venusaur") {
+      setId(3);
+    }
+  };
 
   return (
     <div>
       <section className="poke-button">
-        <button onClick={handleBulbasaurClick} className="catch">
-          Fetch Bulbasaur
-        </button>
-        <button onClick={handleSquirtleClick} className="catch">
-          Fetch Squirtle
-        </button>
-        <button onClick={handleCharmanderClick} className="catch">
-          Fetch Charmander
-        </button>
-        <button onClick={handlePidgeyClick} className="catch">
-          Fetch Pidgey
-        </button>
-        <button onClick={handleCaterpieClick} className="catch">
-          Fetch Caterpie
-        </button>
-        <button onClick={handleRattataClick} className="catch">
-          Fetch Rattata
-        </button>
-        <button onClick={handleWeedleClick} className="catch">
-          Fetch Weedle
-        </button>
-        <button onClick={handleVenusaurClick} className="catch">
-          Fetch Venusaur
-        </button>
+        {pokemonNames.map((eachName) => {
+          return (
+            <button
+              onClick={handleClick}
+              className="catch"
+              name={eachName}
+              key={eachName}
+            >
+              Fetch {eachName}
+            </button>
+          );
+        })}
       </section>
 
       {id ? <PokemonMoves pokemonId={id} /> : null}

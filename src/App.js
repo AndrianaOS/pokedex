@@ -46,9 +46,13 @@ function App() {
           />
           <Route element={<PokemonInfo />} path="/pokemon/:name" />
         </Routes>
-        {/* <BestPokemon abilities={["Flash-fire", "Drought"]} />
-        <CaughtPokemon date={date} /> */}
         <PokemonMovesSelector />
+        {/* <section className="poke-moves">
+          {pokemonNames.map((pokeNames) => {
+            return <PokemonMovesSelector pokeNames={pokeNames} />;
+          })}
+        </section> */}
+        {/* <PokemonMovesSelector pokemon="Squirtle" /> */}
         <PokemonCity />
         <Footer />
       </div>
